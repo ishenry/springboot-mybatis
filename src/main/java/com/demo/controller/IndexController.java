@@ -1,4 +1,4 @@
-package com.henry.controller;
+package com.demo.controller;
 
 import org.apache.log4j.Logger;
 
@@ -18,5 +18,9 @@ public class IndexController {
     @RequestMapping(value="/",method = RequestMethod.GET)
     public String index(){
         return "Hello World";
+    }
+    @RequestMapping(value="hello",method = RequestMethod.GET)
+    public String hello(){
+        return "Hello Spring Boot!";
     }
 }
