@@ -22,11 +22,11 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping("/user")
-    public User getUser(){
+    @RequestMapping("/user/{id}")
+    public User getUser(@PathVariable("id") int id){
         User user =null;
         try {
-            user = userService.findById(1);
+            user = userService.findById(id);
         } catch (SQLException e) {
             e.printStackTrace();
         }
